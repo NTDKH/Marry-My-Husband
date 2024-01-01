@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<html lang="km">    
+<head>
+  <head>
+    <link href='https://raw.githack.com/Neasreyka/Admin-logo/main/jw%202.0.8.css' rel='stylesheet'/> 
+	<title> </title>
+	</head>
+<body>
+  <script src='https://cdn.jwplayer.com/libraries/IDzF9Zmk.js' type='text/javascript'></script>
+  <style>
+  #player {
+    position: absolute;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .jwplayer .jw-rightclick .jw-rightclick-list {
+        border-radius: 1px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+</style>
+	<!-- Player -->
+<div id="player"></div>
+<script>
+  const playerInstance = jwplayer("player").setup({
+  controls: true,
+  sharing: false,
+  displaytitle: false,
+  displaydescription: true,
+  abouttext: "",
+  aboutlink: "",
+
+  skin: {
+    name: ""
+  },
+  logo: {
+    file:
+      "https://blogger.googleusercontent.com/img/a/AVvXsEjvSrgwjAWkqqX0u2zsBVfuuplsvWqZw6NOqO6HU3Cs_nx9OXXCxtCinSFKzbSIxHGKj6jp4Rzan6jFEazN8fuoXfos7SCMoPIh06KG1EsgdmlmZ5iwu0HNRaJ_as2sIGLGXeRptVz_DP9miQg_c_-0vebEEnxVujotIHcEDG4Gv-fJUxkJj2uYhlMvWLyh=s150 ",
+    link: " "
+  },
+  captions: {
+    color: "#FFF",
+    fontSize: 12,
+    backgroundOpacity: 60,
+    edgeStyle: "uniform"
+  },
+
+  playlist: [
+    {
+      title: " ",
+      description: " ",
+      image: "#",
+      sources: [
+      {
+          file:
+            "https://cdn.dzen.ru/vod/converted-video/vod-content/30/10/63/81/05/26/00/52/05/0/5452a4b2-7955-498c-9eb2-38faf50ed496/kaltura/desc_eb6e5342e4b47bb5109087968ceada00/2701990030420453458/ysign1=17b0246f2e8b35ae887ac84f1381dff4f3fe61079ecc3cd231d78155e083d866,abcID=967,from=zen,pfx,sfx,ts=65a041ef/manifest.mpd?vsid=11eb80fc1a6ffe4d59ae6d6fcb4321a3b583458fcbfexZWPx1234x1704137513&clid=495&dzenuid=&slots=925788%2C0%2C72%3B931635%2C0%2C96%3B933783%2C0%2C26%3B938649%2C0%2C67&from=zen&partner-id=NaN&video-category-id=0&imp-id=undefined&gzip=1&reqid=3709381313.45.1704137455796.24701&video-content-id=vUqjb7Z1lfyU&partner-stat-id=0&duration=4004&puid=10000000778590984&from_block=site_desktop&strongest_id=10000000778590984&item_id=-93187727886460126&stream_block=video_related%3Avideo_page&rid=3709381313.45.1704137455796.24701&ppi=site_desktop%3Adzen%3Avideo_site_desktop&frontend_vh_reqid=3709381313.45.1704137455796.24701&zen-content-id=vUqjb7Z1lfyU&video-content-duration=3984&content_id=vUqjb7Z1lfyU&dzen-exp-ids=92578...",
+          label: "Auto",
+          default: true
+        
+        }],
+        captions: [
+        {file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136270/Marry%20My%20Husband/KHM_1_iv0ku2.vtt",
+          label: "Khmer",
+          kind: "captions",
+          default: true
+
+        },
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136280/Marry%20My%20Husband/ENG_1_s08tl8.srt",
+          label: "English",
+          kind: "captions",
+        },
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136313/Marry%20My%20Husband/SP_1_x6qqb4.srt",
+          label: "Spanish",
+          kind: "captions",
+        },
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136298/Marry%20My%20Husband/Italian_1_tktqm9.vtt",
+          label: "Italian",
+          kind: "captions",
+        },
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136291/Marry%20My%20Husband/IN_1_zksbid.srt",
+          label: "Indonesia",
+          kind: "captions",
+        },
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136321/Marry%20My%20Husband/Thai_1_sgtt4g.vtt",
+          label: "Thai",  
+
+          kind: "captions",
+        },
+       
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136285/Marry%20My%20Husband/AR_1_moaq16.vtt",
+          label: "Arabic",
+          kind: "captions",
+        },
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136340/Marry%20My%20Husband/VN_1_dr0i13.vtt",
+          label: "Vietnam",
+          kind: "captions",
+        },
+        
+        {
+        file:"https://res.cloudinary.com/dkymshypa/raw/upload/v1704136305/Marry%20My%20Husband/Malay_1_t7bimm.vtt",
+          label: "Malay",
+          kind: "captions",
+        }],
+    }
+  ],
+  advertising: {
+    client: "vast",
+  }
+});
+
+playerInstance.on("ready", function () {
+  const buttonId = "download-video-button";
+  const iconPath =
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0Ij48cGF0aCBmaWxsPSJub25lIiBkPSJNMCAwaDI0djI0SDB6Ii8+PHBhdGggZD0iTTMgMTloMTh2Mkgzdi0yem0xMC01LjgyOEwxOS4wNzEgNy4xbDEuNDE0IDEuNDE0TDEyIDE3IDMuNTE1IDguNTE1IDQuOTI5IDcuMSAxMSAxMy4xN1YyaDJ2MTEuMTcyeiIgZmlsbD0icmdiYSgyNDcsMjQ3LDI0NywxKSIvPjwvc3ZnPg==";
+  const tooltipText = "Download";
+  // This function is executed when the button is clicked
+  function buttonClickAction() {
+    const playlistItem = playerInstance.getPlaylistItem();
+    const anchor = document.createElement("a");
+    const fileUrl = playlistItem.file;
+    anchor.setAttribute("href", fileUrl);
+    const downloadName = playlistItem.file.split("/").pop();
+    anchor.setAttribute("download", downloadName);
+    anchor.style.display = "none";
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  }
+
+  // Move the timeslider in-line with other controls
+  const playerContainer = playerInstance.getContainer();
+  const buttonContainer = playerContainer.querySelector(".jw-button-container");
+  const spacer = buttonContainer.querySelector(".jw-spacer");
+  const timeSlider = playerContainer.querySelector(".jw-slider-time");
+  // Forward 10 seconds
+  const rewindContainer = playerContainer.querySelector(
+    ".jw-display-icon-rewind"
+  );
+  const forwardContainer = rewindContainer.cloneNode(true);
+  const forwardDisplayButton = forwardContainer.querySelector(
+    ".jw-icon-rewind"
+  );
+  forwardDisplayButton.style.transform = "scaleX(-1)";
+  forwardDisplayButton.ariaLabel = "Forward 10 Seconds";
+  const nextContainer = playerContainer.querySelector(".jw-display-icon-next");  nextContainer.parentNode.insertBefore(forwardContainer, nextContainer);
+  // control bar icon
+  playerContainer.querySelector(".jw-display-icon-next").style.display = "none"; // hide next button
+  const rewindControlBarButton = buttonContainer.querySelector(
+    ".jw-icon-rewind"
+  );
+  const forwardControlBarButton = rewindControlBarButton.cloneNode(true);
+  forwardControlBarButton.style.transform = "scaleX(-1)";
+  forwardControlBarButton.ariaLabel = "Forward 10 Seconds";  rewindControlBarButton.parentNode.insertBefore(
+    forwardControlBarButton,    rewindControlBarButton.nextElementSibling
+  );
+  // add onclick handlers
+  [forwardDisplayButton, forwardControlBarButton].forEach((button) => {
+    button.onclick = () => {     playerInstance.seek(playerInstance.getPosition() + 10);
+    };
+  });
+});
+</script>
+</body>
+</html>
